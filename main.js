@@ -1,4 +1,4 @@
-let body = document.body;
+let project = document.getElementById('simple-simulation');
 let balls = [];
 let intervalIDs = [];
 let maxEdge = 450;
