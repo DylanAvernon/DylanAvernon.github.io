@@ -28,6 +28,9 @@ function changeGravity() {
     let newGravity = Number.parseInt(prompt("How strong do you want the gravity to be?"));
     if (!Number.isNaN(newGravity)) {
         gravity = newGravity;
+        balls.forEach(ball => {
+            ball.velY = ball.originalVelY;
+        })
     }
 }
 

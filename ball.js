@@ -3,6 +3,8 @@ class Ball {
       this.ball = document.createElement('div');
       this.color = getRandomColor();
       this.ball.className = 'balls';
+      this.originalVelX = velX;
+      this.originalVelY = velY;
       this.posX = posX;
       this.posY = posY;
       this.ball.style.left = `${this.posX}px`;
