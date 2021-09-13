@@ -15,6 +15,11 @@ h2 {
     padding: 0px;
     text-align: center;
 }
+.container {
+    position: relative;
+    border-style: solid;
+    border-width: 3px;
+}
 #simple-simulation {
     width: 65%;
 }

@@ -1,35 +1,43 @@
 class Ball {
-    constructor(velX = getRandomInt(7, 1), velY = getRandomInt(7, 1), posX = getRandomInt(450, 0), posY = getRandomInt(450, 0)) {
-      this.ball = document.createElement('div');
+    constructor(properties, velX = getRandomInt(7, 1), velY = getRandomInt(7, 1), posX = getRandomInt(450, 0), posY = getRandomInt(450, 0)) {
+      this.element = document.createElement('div');
       this.color = getRandomColor();
-      this.ball.className = 'balls';
       this.originalVelX = velX;
       this.originalVelY = velY;
-      this.posX = posX;
-      this.posY = posY;
-      this.ball.style.left = `${this.posX}px`;
-      this.ball.style.top = `${this.posY}px`;
-      this.ball.style.background = `rgb(${this.color.red}, ${this.color.green}, ${this.color.blue})`;
-      container.container.appendChild(this.ball);
-  
       this.velX = velX;
       this.velY = velY;
-      this.maxEdge = maxEdge;
-      this.minEdge = minEdge;
+      this.posX = posX;
+      this.posY = posY;
+      this.properties = properties;
+      this.container = this.properties.project.container;
+      this.maxEdge = this.properties.maxEdge;
+      this.minEdge = this.properties.minEdge;
+
+      this.element.className = 'balls';
+      this.element.style.left = `${this.posX}px`;
+      this.element.style.top = `${this.posY}px`;
+      this.element.style.background = `rgb(${this.color.red}, ${this.color.green}, ${this.color.blue})`;
     }
     computeNewCoordinates(b) {
         // New X-coordinate
         b.posX += b.velX;
 
         // apply gravity
-        b.velY += gravity;
+        b.velY += b.properties.gravity;
 
         // New Y-coordinate
         b.posY += b.velY;
     } 
 
     detectEdges(b) {
-        if (b.posX < b.minEdge || b.posX > b.maxEdge) b.velX = -b.velX;
+        if (b.posX < b.minEdge) {
+            b.velX = -b.velX;
+            b.posX = b.minEdge;
+        }
+        else if (b.posX > b.maxEdge) {
+            b.velX = -b.velX;
+            b.posX = b.maxEdge;
+        }
         if (b.posY > b.maxEdge) {
             b.velY = -b.velY;
 
@@ -44,13 +52,21 @@ class Ball {
             b.posY = b.minEdge;
         }
     }
+    moveRandomly(b) {
+        b.posX += getRandomInt(b.properties.stepSize, -b.properties.stepSize) + b.properties.windSpeed;
+        b.posY += getRandomInt(b.properties.stepSize, -b.properties.stepSize) + b.properties.gravity;
+        
+        b.detectEdges(b);
 
+        b.element.style.left = b.posX + 'px';
+        b.element.style.top = b.posY + 'px';
+    }
     move(b) {
         b.computeNewCoordinates(b);
         b.detectEdges(b);
 
         // Move the ball
-        b.ball.style.left = b.posX + 'px';
-        b.ball.style.top = b.posY + 'px';
+        b.element.style.left = b.posX + 'px';
+        b.element.style.top = b.posY + 'px';
     }
 }

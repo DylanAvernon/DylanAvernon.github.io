@@ -1,13 +1,11 @@
 class Container {
-    constructor() {
-        this.container = document.createElement('div');
-        this.container.className = 'container';
-        this.container.style.position = 'relative';
-        this.container.style.borderStyle = 'solid';
-        this.container.style.borderWidth = '3px';
-        this.container.style.left = '11px';
-        this.container.style.width = '500px';
-        this.container.style.height = '500px';
-        project.appendChild(this.container);
+    constructor(id, width=500, height=500) {
+        this.width = width;
+        this.height = height;
+        this.element = document.createElement('div');
+        this.element.id = `${id}-container`;
+        this.element.className = 'container';
+        this.element.style.width = `${this.width}px`;
+        this.element.style.height = `${this.height}px`;
     }
 }
