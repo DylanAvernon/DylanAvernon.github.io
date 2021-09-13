@@ -1,3 +1,4 @@
+import { Button } from './button.js';
 class NavigationBar {
     constructor(id, buttons) {
         this.buttons = [];

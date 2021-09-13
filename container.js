@@ -9,3 +9,4 @@ class Container {
         this.element.style.height = `${this.height}px`;
     }
 }
+export { Container };

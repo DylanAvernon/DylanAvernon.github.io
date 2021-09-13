@@ -6,3 +6,4 @@ class Button {
         this.element.textContent = textContent;
     }
 }
+export { Button };
