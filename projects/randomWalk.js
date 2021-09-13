@@ -2,8 +2,8 @@ import { Project } from '../components/project.js';
 import { Ball } from '../components/ball.js';
 import { getRandomInt } from '../components/helpers.js';
 let randomWalkStructure = {
-    id: 'random-walk',
-    title: 'Random Walk',
+    id: 'random-walk-simulation',
+    title: 'Random Walk Simulation',
     buttons: {
         'Create Balls': function createBalls() {
             let numberOfBalls = Number.parseInt(prompt("How many balls do you want?"));
