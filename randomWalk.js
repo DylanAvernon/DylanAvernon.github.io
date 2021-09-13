@@ -1,3 +1,4 @@
+import { Project } from './project.js';
 let randomWalkStructure = {
     id: 'random-walk',
     title: 'Random Walk',
