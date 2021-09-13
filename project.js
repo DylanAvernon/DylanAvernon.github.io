@@ -1,4 +1,3 @@
-import { NavigationBar } from './navigationbar.js';
 class Project {
     constructor(structure) {
         this.buttons = structure.buttons;
@@ -24,3 +23,4 @@ class Project {
         this.element.appendChild(this.container.element);
     }
 }
+export { Project };

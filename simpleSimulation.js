@@ -1,3 +1,4 @@
+import { Project } from './project.js';
 let projectStructure = {
     id: 'simple-simulation',
     title: 'Particle Motion Simulation',
