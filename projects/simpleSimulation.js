@@ -1,7 +1,7 @@
 import { Project } from '../components/project.js';
 import { Ball } from '../components/ball.js';
 let projectStructure = {
-    id: 'simple-simulation',
+    id: 'particle-motion-simulation',
     title: 'Particle Motion Simulation',
     buttons: {
         'Create Balls': function createBalls() {
