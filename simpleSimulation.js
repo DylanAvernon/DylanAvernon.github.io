@@ -1,6 +1,6 @@
 let projectStructure = {
     id: 'simple-simulation',
-    title: 'Simple Simulation',
+    title: 'Particle Motion Simulation',
     buttons: {
         'Create Balls': function createBalls() {
             let numberOfBalls = Number.parseInt(prompt("How many balls do you want?"));
