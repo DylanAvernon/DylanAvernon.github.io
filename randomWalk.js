@@ -1,5 +1,6 @@
 import { Project } from './project.js';
 import { Ball } from './ball.js';
+import { getRandomInt } from './helpers.js';
 let randomWalkStructure = {
     id: 'random-walk',
     title: 'Random Walk',
