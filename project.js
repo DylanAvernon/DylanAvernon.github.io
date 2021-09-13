@@ -1,3 +1,4 @@
+import { NavigationBar } from './navigationbar.js';
 class Project {
     constructor(structure) {
         this.buttons = structure.buttons;

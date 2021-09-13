@@ -12,3 +12,4 @@ class NavigationBar {
         }
     }
 }
+export { NavigationBar };
