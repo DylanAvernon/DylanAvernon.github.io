@@ -8,4 +8,5 @@ function getRandomColor() {
         blue: getRandomInt(255, 0)
     };
 }
+export { getRandomInt, getRandomColor };
 

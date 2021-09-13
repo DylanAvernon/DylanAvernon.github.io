@@ -1,3 +1,4 @@
+import { getRandomInt, getRandomColor } from './helpers.js';
 class Ball {
     constructor(properties, velX = getRandomInt(7, 1), velY = getRandomInt(7, 1), posX = getRandomInt(450, 0), posY = getRandomInt(450, 0)) {
       this.element = document.createElement('div');
@@ -70,3 +71,4 @@ class Ball {
         b.element.style.top = b.posY + 'px';
     }
 }
+export { Ball };
