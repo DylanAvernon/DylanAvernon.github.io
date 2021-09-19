@@ -45,6 +45,15 @@ let randomWalkStructure = {
             let intervalToRemove = randomWalkProperties.intervalIDs.pop();
             clearInterval(intervalToRemove);
             ballToRemove.container.element.removeChild(ballToRemove.element);
+        },
+        'Remove All Balls': function removeAll() {
+            let length = randomWalkProperties.balls.length;
+            for (let i = 0; i < length; i++) {
+                let ballToRemove = randomWalkProperties.balls.pop();
+                let intervalToRemove = randomWalkProperties.intervalIDs.pop();
+                clearInterval(intervalToRemove);
+                ballToRemove.container.element.removeChild(ballToRemove.element);
+            }
         }
     }
 }

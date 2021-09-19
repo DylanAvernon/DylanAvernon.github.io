@@ -15,6 +15,21 @@ let projectStructure = {
                 properties.balls.push(newBall);
             }
         },
+        'Remove Ball': function removeBall() {
+            let ballToRemove = properties.balls.pop();
+            let intervalToRemove = properties.intervalIDs.pop();
+            clearInterval(intervalToRemove);
+            ballToRemove.container.element.removeChild(ballToRemove.element);
+        },
+        'Remove All Balls': function removeAll() {
+            let length = properties.balls.length;
+            for (let i = 0; i < length; i++) {
+                let ballToRemove = properties.balls.pop();
+                let intervalToRemove = properties.intervalIDs.pop();
+                clearInterval(intervalToRemove);
+                ballToRemove.container.element.removeChild(ballToRemove.element);
+            }
+        },
         'Start Simulation': function startSimulation() {
             properties.balls.forEach((ball) => properties.intervalIDs.push(setInterval(ball.move, 1000/60, ball)) );
         },
@@ -29,12 +44,6 @@ let projectStructure = {
                     ball.velY = ball.originalVelY;
                 }) 
             }
-        },
-        'Remove Ball': function removeBall() {
-            let ballToRemove = properties.balls.pop();
-            let intervalToRemove = properties.intervalIDs.pop();
-            clearInterval(intervalToRemove);
-            ballToRemove.container.element.removeChild(ballToRemove.element);
         }
     }
 }
