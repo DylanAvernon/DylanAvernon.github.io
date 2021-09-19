@@ -16,6 +16,21 @@ let randomWalkStructure = {
                 randomWalkProperties.balls.push(newBall);
             }
         },
+        'Remove Ball': function removeBall() {
+            let ballToRemove = randomWalkProperties.balls.pop();
+            let intervalToRemove = randomWalkProperties.intervalIDs.pop();
+            clearInterval(intervalToRemove);
+            ballToRemove.container.element.removeChild(ballToRemove.element);
+        },
+        'Remove All Balls': function removeAll() {
+            let length = randomWalkProperties.balls.length;
+            for (let i = 0; i < length; i++) {
+                let ballToRemove = randomWalkProperties.balls.pop();
+                let intervalToRemove = randomWalkProperties.intervalIDs.pop();
+                clearInterval(intervalToRemove);
+                ballToRemove.container.element.removeChild(ballToRemove.element);
+            }
+        },
         'Start Simulation': function startSimulation() {
             randomWalkProperties.balls.forEach((ball) => randomWalkProperties.intervalIDs.push(setInterval(ball.moveRandomly, 1000/62, ball)) );
         },
@@ -38,21 +53,6 @@ let randomWalkStructure = {
                 randomWalkProperties.balls.forEach((ball) => {
                     ball.velY = ball.originalVelY;
                 }) 
-            }
-        },
-        'Remove Ball': function removeBall() {
-            let ballToRemove = randomWalkProperties.balls.pop();
-            let intervalToRemove = randomWalkProperties.intervalIDs.pop();
-            clearInterval(intervalToRemove);
-            ballToRemove.container.element.removeChild(ballToRemove.element);
-        },
-        'Remove All Balls': function removeAll() {
-            let length = randomWalkProperties.balls.length;
-            for (let i = 0; i < length; i++) {
-                let ballToRemove = randomWalkProperties.balls.pop();
-                let intervalToRemove = randomWalkProperties.intervalIDs.pop();
-                clearInterval(intervalToRemove);
-                ballToRemove.container.element.removeChild(ballToRemove.element);
             }
         }
     }
