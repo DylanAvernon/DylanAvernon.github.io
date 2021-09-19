@@ -1,4 +1,4 @@
-import { Project } from '../components/project.js';
+import { Simulation } from '../components/simulation.js';
 import { Pacman } from '../components/pacman.js';
 let images = [
     ['../images/right-opened.png', '../images/right-closed.png'],
@@ -43,6 +43,6 @@ let pacmanSimulationProperties = {
     pacmanImages: images,
     maxEdge: 450,
     minEdge: 0,
-    project: new Project(pacmanSimulationStructure)
+    project: new Simulation(pacmanSimulationStructure)
 }
 document.getElementById('projects').appendChild(pacmanSimulationProperties.project.element);

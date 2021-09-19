@@ -1,4 +1,4 @@
-import { Project } from '../components/project.js';
+import { Simulation } from '../components/simulation.js';
 import { Ball } from '../components/ball.js';
 let projectStructure = {
     id: 'particle-motion-simulation',
@@ -54,6 +54,6 @@ let properties = {
         maxEdge: 450,
         minEdge: 0,
         gravity: 0,
-        project: new Project(projectStructure)
+        project: new Simulation(projectStructure)
 }
 document.getElementById('projects').appendChild(properties.project.element);

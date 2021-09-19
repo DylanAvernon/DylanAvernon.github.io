@@ -1,4 +1,4 @@
-import { Project } from '../components/project.js';
+import { Simulation } from '../components/simulation.js';
 import { Ball } from '../components/ball.js';
 import { getRandomInt } from '../components/helpers.js';
 let randomWalkStructure = {
@@ -66,6 +66,6 @@ let randomWalkProperties = {
         gravity: 0,
         stepSize: 10,
         windSpeed: 0,
-        project: new Project(randomWalkStructure)
+        project: new Simulation(randomWalkStructure)
 }
 document.getElementById('projects').appendChild(randomWalkProperties.project.element);
