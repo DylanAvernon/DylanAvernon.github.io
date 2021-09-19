@@ -45,4 +45,4 @@ let pacmanSimulationProperties = {
     minEdge: 0,
     project: new Simulation(pacmanSimulationStructure)
 }
-document.getElementById('projects').appendChild(pacmanSimulationProperties.project.element);
+document.getElementById('simulations').appendChild(pacmanSimulationProperties.project.element);

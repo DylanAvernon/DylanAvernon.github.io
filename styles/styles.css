@@ -21,7 +21,7 @@ h3 {
     border-width: 3px;
     margin-bottom: 50px;
 }
-#projects {
+#simulations {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

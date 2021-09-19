@@ -68,4 +68,4 @@ let randomWalkProperties = {
         windSpeed: 0,
         project: new Simulation(randomWalkStructure)
 }
-document.getElementById('projects').appendChild(randomWalkProperties.project.element);
+document.getElementById('simulations').appendChild(randomWalkProperties.project.element);

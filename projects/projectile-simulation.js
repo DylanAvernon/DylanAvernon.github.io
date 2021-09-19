@@ -56,4 +56,4 @@ let projectileSimulationProperties = {
         gravity: 0,
         project: new Simulation(projectileSimulationStructure)
 }
-document.getElementById('projects').appendChild(projectileSimulationProperties.project.element);
+document.getElementById('simulations').appendChild(projectileSimulationProperties.project.element);
