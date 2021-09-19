@@ -4,7 +4,7 @@ body {
 header {
     text-align: center;
 }
-img { 
+#profile-image { 
     height: 250px;
     border-radius: 100%;
 }
