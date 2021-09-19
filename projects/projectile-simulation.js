@@ -1,8 +1,8 @@
 import { Simulation } from '../components/simulation.js';
 import { Ball } from '../components/ball.js';
 let projectileSimulationStructure = {
-    id: 'particle-motion-simulation',
-    title: 'Particle Motion Simulation',
+    id: 'projectile-simulation',
+    title: 'Projectile Simulation',
     buttons: {
         'Create Balls': function createBalls() {
             let numberOfBalls = Number.parseInt(prompt("How many balls do you want?"));
