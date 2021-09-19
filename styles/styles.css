@@ -19,9 +19,12 @@ h2 {
     position: relative;
     border-style: solid;
     border-width: 3px;
+    margin-bottom: 50px;
 }
 #projects {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .navigation-bar {
     width: 500px;
