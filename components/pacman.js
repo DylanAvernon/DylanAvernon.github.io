@@ -1,6 +1,6 @@
 import { getRandomInt } from './helpers.js';
 class Pacman {
-    constructor(properties, velX = getRandomInt(7, 1), velY = getRandomInt(7, 1), posX = getRandomInt(450, 0), posY = getRandomInt(450, 0)) {
+    constructor(properties, className, velX = getRandomInt(7, 1), velY = getRandomInt(7, 1), posX = getRandomInt(450, 0), posY = getRandomInt(450, 0)) {
         this.properties = properties;
         this.velX = velX;
         this.velY = velY;
@@ -17,7 +17,7 @@ class Pacman {
         this.maxEdge = this.properties.maxEdge;
         this.minEdge = this.properties.minEdge;
 
-        this.element.className = 'pacman';
+        this.element.className = className;
         this.element.src = this.pacmanImages[this.direction][this.mouth];
         this.element.style.left = `${this.posX}px`;
         this.element.style.top = `${this.posY}px`;

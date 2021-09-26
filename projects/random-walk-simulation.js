@@ -11,7 +11,7 @@ let randomWalkStructure = {
                 numberOfBalls = 1;
             }
             for (let i = 0; i < numberOfBalls; i++) {
-                let newBall = new Ball(randomWalkProperties, getRandomInt(7, 1), getRandomInt(7, 1), 450/2, 450/2);
+                let newBall = new Ball(randomWalkProperties, 'ball', getRandomInt(7, 1), getRandomInt(7, 1), 450/2, 450/2);
                 newBall.container.element.appendChild(newBall.element);
                 randomWalkProperties.balls.push(newBall);
             }

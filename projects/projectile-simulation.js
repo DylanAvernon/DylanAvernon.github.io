@@ -10,7 +10,7 @@ let projectileSimulationStructure = {
                 numberOfBalls = 1;
             }
             for (let i = 0; i < numberOfBalls; i++) {
-                let newBall = new Ball(projectileSimulationProperties);
+                let newBall = new Ball(projectileSimulationProperties, 'ball');
                 newBall.container.element.appendChild(newBall.element);
                 projectileSimulationProperties.balls.push(newBall);
             }

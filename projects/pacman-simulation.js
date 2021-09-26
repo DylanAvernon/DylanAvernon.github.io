@@ -9,7 +9,7 @@ let pacmanSimulationStructure = {
     title: 'Pacman Simulation',
     buttons: {
         'Create Pacmen': function createPacmen() {
-            let newPacman = new Pacman(pacmanSimulationProperties);
+            let newPacman = new Pacman(pacmanSimulationProperties, 'pacman');
             newPacman.container.element.appendChild(newPacman.element);
             pacmanSimulationProperties.pacmen.push(newPacman);
         },

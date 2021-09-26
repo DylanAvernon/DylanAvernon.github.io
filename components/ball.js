@@ -1,6 +1,6 @@
 import { getRandomInt, getRandomColor } from './helpers.js';
 class Ball {
-    constructor(properties, velX = getRandomInt(7, 1), velY = getRandomInt(7, 1), posX = getRandomInt(450, 0), posY = getRandomInt(450, 0)) {
+    constructor(properties, className, velX = getRandomInt(7, 1), velY = getRandomInt(7, 1), posX = getRandomInt(450, 0), posY = getRandomInt(450, 0)) {
       this.element = document.createElement('div');
       this.color = getRandomColor();
       this.originalVelX = velX;
@@ -14,7 +14,7 @@ class Ball {
       this.maxEdge = this.properties.maxEdge;
       this.minEdge = this.properties.minEdge;
 
-      this.element.className = 'balls';
+      this.element.className = className;
       this.element.style.left = `${this.posX}px`;
       this.element.style.top = `${this.posY}px`;
       this.element.style.background = `rgb(${this.color.red}, ${this.color.green}, ${this.color.blue})`;

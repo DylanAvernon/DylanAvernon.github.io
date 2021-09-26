@@ -17,11 +17,11 @@ class Simulation {
         this.element.appendChild(this.header3);
 
         // Create navigation bar
-        this.navigationBar = new NavigationBar(this.element.id, this.buttons);
+        this.navigationBar = new NavigationBar(this.element.id, 'navigation-bar', this.buttons);
         this.element.appendChild(this.navigationBar.element);
 
         // Create container
-        this.container = new Container(this.element.id, 500, 500);
+        this.container = new Container(this.element.id, 'container');
         this.element.appendChild(this.container.element);
     }
 }
