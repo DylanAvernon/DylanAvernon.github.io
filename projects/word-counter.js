@@ -20,7 +20,7 @@ let wordCounterStructure = {
         'Remove Text': function removeText() {
             let inputContainer = wordCounterProperties.project.container.inputContainer.element;
             inputContainer.textContent = '';
-            wordCounterStructure.buttons['Count Letters']();
+            wordCounterStructure.buttons['Count Words']();
         }
     }
 }
