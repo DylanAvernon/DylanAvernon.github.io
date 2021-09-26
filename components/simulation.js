@@ -1,3 +1,4 @@
+import { Header3 } from './header3.js';
 import { NavigationBar } from './navigationbar.js';
 import { Container } from './container.js';
 class Simulation {
@@ -10,11 +11,8 @@ class Simulation {
         this.element.className = 'simulation';
 
         // Create project header
-        this.header3 = document.createElement('h3');
-        this.header3.id = `${this.element.id}-header3`;
-        this.header3.className = 'simulation-header';
-        this.header3.textContent = structure.title;
-        this.element.appendChild(this.header3);
+        this.header3 = new Header3(`${this.element.id}-header3`, `${this.element.className}-header3`, structure.title);
+        this.element.appendChild(this.header3.element);
 
         // Create navigation bar
         this.navigationBar = new NavigationBar(this.element.id, 'navigation-bar', this.buttons);
