@@ -12,9 +12,14 @@ let wordCounterStructure = {
             let inputContainer = wordCounterProperties.project.container.inputContainer.element;
             let outputContainer = wordCounterProperties.project.container.outputContainer.element;
             let content = inputContainer.textContent;
+            let count = 0;
             content = content.replace(/[^a-zA-Z ]/g, '');
             content = content.split(' ');
-            let count = content.length;
+            content.forEach((word) => {
+                if (word !== '') {
+                    count += 1;
+                }
+            });
             outputContainer.textContent = `Word Count: ${count} word(s)`;
         },
         'Remove Text': function removeText() {
