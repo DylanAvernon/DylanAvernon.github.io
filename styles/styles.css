@@ -23,7 +23,7 @@ button {
 
 #simulations, #text-processors {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
