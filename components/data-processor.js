@@ -15,7 +15,7 @@ class DataProcessor {
         this.element.appendChild(this.header3.element);
 
         // Create navigation bar
-        this.navigationBar = new NavigationBar(this.element.id, this.buttons);
+        this.navigationBar = new NavigationBar(this.element.id, 'navigation-bar', this.buttons);
         this.element.appendChild(this.navigationBar.element);
 
         // Create container
