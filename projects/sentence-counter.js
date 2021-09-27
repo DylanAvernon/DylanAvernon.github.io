@@ -13,8 +13,7 @@ let sentenceCounterStructure = {
             let outputContainer = sentenceCounterProperties.project.container.outputContainer.element;
             let content = inputContainer.textContent;
             let count = 0;
-            content = content.split(/ /);
-            console.log(content);
+            content = content.split(/\s/);
             content.forEach((word) => {
                 if (word.length > 1 && word[word.length-1] === '!' || word[word.length-1] === '?'|| word[word.length-1] === '.') {
                     count += 1;

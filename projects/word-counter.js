@@ -13,7 +13,7 @@ let wordCounterStructure = {
             let outputContainer = wordCounterProperties.project.container.outputContainer.element;
             let content = inputContainer.textContent;
             let count = 0;
-            content = content.replace(/[^a-zA-Z ]/g, '');
+            content = content.replace(/[^a-zA-Z ]/g, ' ');
             content = content.split(' ');
             content.forEach((word) => {
                 if (word !== '') {
