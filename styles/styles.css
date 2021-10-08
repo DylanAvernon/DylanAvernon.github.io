@@ -33,8 +33,7 @@ button {
 
 .container {
     position: relative;
-    border-style: solid;
-    border-width: 3px;
+    outline: 3px solid black;
     margin-bottom: 50px;
     width: 500px;
     height: 500px;
@@ -44,8 +43,7 @@ button {
     width: 500px;
     height: 500px;
     margin-bottom: 50px;
-    border-style: solid;
-    border-width: 3px;
+    outline: 3px solid black;
 }
 .io-container-subcontainer {
     width: 500px;
@@ -53,8 +51,7 @@ button {
     
 }
 .io-container div:first-child {
-    border-bottom-style: solid;
-    border-bottom-width: 3px;
+    outline: 3px solid black;
     word-wrap: break-word;
     overflow-y: scroll;
 }
