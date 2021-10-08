@@ -1,8 +1,8 @@
-import { Simulation } from '../components/simulation.js';
-import { Pacman } from '../components/pacman.js';
+import { Simulation } from '../../components/simulation.js';
+import { Pacman } from '../../components/pacman.js';
 let images = [
-    ['../images/right-opened.png', '../images/right-closed.png'],
-    ['../images/left-opened.png', '../images/left-closed.png']
+    ['../../images/right-opened.png', '../../images/right-closed.png'],
+    ['../../images/left-opened.png', '../../images/left-closed.png']
 ];
 let pacmanSimulationStructure = {
     id: 'pacman-simulation',
@@ -45,4 +45,5 @@ let pacmanSimulationProperties = {
     minEdge: 0,
     project: new Simulation(pacmanSimulationStructure)
 }
-document.getElementById('simulations').appendChild(pacmanSimulationProperties.project.element);
+
+export { pacmanSimulationProperties };

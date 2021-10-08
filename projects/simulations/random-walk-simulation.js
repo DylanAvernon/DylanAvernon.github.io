@@ -1,6 +1,6 @@
-import { Simulation } from '../components/simulation.js';
-import { Ball } from '../components/ball.js';
-import { getRandomInt } from '../components/helpers.js';
+import { Simulation } from '../../components/simulation.js';
+import { Ball } from '../../components/ball.js';
+import { getRandomInt } from '../../components/helpers.js';
 let randomWalkStructure = {
     id: 'random-walk-simulation',
     title: 'Random Walk Simulation',
@@ -68,4 +68,5 @@ let randomWalkProperties = {
         windSpeed: 0,
         project: new Simulation(randomWalkStructure)
 }
-document.getElementById('simulations').appendChild(randomWalkProperties.project.element);
+
+export { randomWalkProperties };

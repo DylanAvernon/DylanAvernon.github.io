@@ -1,4 +1,4 @@
-import { TextProcessor } from '../components/text-processor.js';
+import { TextProcessor } from '../../components/text-processor.js';
 let wordCounterStructure = {
     id: 'word-counter',
     title: 'Word Counter',
@@ -33,4 +33,5 @@ let wordCounterStructure = {
 let wordCounterProperties = {
         project: new TextProcessor(wordCounterStructure)
 }
-document.getElementById('text-processors').appendChild(wordCounterProperties.project.element);
+
+export { wordCounterProperties };

@@ -1,5 +1,5 @@
-import { Simulation } from '../components/simulation.js';
-import { Ball } from '../components/ball.js';
+import { Simulation } from '../../components/simulation.js';
+import { Ball } from '../../components/ball.js';
 let projectileSimulationStructure = {
     id: 'projectile-simulation',
     title: 'Projectile Simulation',
@@ -56,4 +56,5 @@ let projectileSimulationProperties = {
         gravity: 0,
         project: new Simulation(projectileSimulationStructure)
 }
-document.getElementById('simulations').appendChild(projectileSimulationProperties.project.element);
+
+export { projectileSimulationProperties };
