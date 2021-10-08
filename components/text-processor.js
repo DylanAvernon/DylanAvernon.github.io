@@ -8,7 +8,7 @@ class TextProcessor {
         // Create project div
         this.element = document.createElement('div');
         this.element.id = structure.id;
-        this.element.className = 'data-processor';
+        this.element.className = 'text-processor';
 
         // Create project header
         this.header3 = new Header3(`${this.element.id}-header3`, `${this.element.className}-header3`, structure.title);
