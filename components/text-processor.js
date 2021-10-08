@@ -1,7 +1,7 @@
 import { Header3 } from './header3.js';
 import { NavigationBar } from './navigationbar.js';
 import { IoContainer } from './io-container.js';
-class DataProcessor {
+class TextProcessor {
     constructor(structure) {
         this.buttons = structure.buttons;
 
@@ -23,4 +23,4 @@ class DataProcessor {
         this.element.appendChild(this.container.element);
     }
 }
-export { DataProcessor };
+export { TextProcessor };
