@@ -22,7 +22,7 @@ button {
     border-radius: 100%;
 }
 
-#simulations, #text-processors {
+#simulations, #text-processors, #featured-projects {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -32,7 +32,9 @@ button {
     width: 500px;
     margin-bottom: 5px;
 }
-
+.permutor-container {
+    padding: 5px;
+}
 .container {
     position: relative;
     outline: 3px solid black;
@@ -66,4 +68,18 @@ button {
 }
 .ball {
     border-radius: 50%;
+}
+.max-standard {
+    max-height: 3rem;
+}
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-template-rows: repeat(1, 60px);
+    grid-gap: 10px;
 }
