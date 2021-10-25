@@ -1,15 +1,40 @@
 import { Button } from './button.js';
 class NavigationBar {
-    constructor(id, className, buttons) {
-        this.buttons = [];
+    constructor(ids, classList, buttons) {
         this.element = document.createElement('nav');
-        this.element.id = `${id}-navigation-bar`;
-        this.element.className = className;
+        this.buttons = buttons;
+        this.classList = classList;
+        this.ids = ids;
+    }
 
-        for (let key in buttons) {
-            let button = new Button(`${id}-button`, buttons[key], key);
-            this.buttons.push(button);
-            this.element.appendChild(button.element);
+    render() {
+        let buttonObjects = [];
+        this.element.id = this.ids.navigationBar;
+
+        for (let key in this.buttons) {
+            let button = new Button(this.ids.buttons[key], this.classList.buttons[key], this.buttons[key], key);
+            button.render();
+            buttonObjects.push(button);
+        }
+        
+        this.buttons = buttonObjects;
+
+        for (let i = 0; i < this.buttons.length; i++) {
+            this.element.appendChild(this.buttons[i].element);
+        }
+    }
+
+    style() {
+
+        this.element.classList.add(...this.classList.navigationBar);
+        for (let i = 0; i < this.buttons.length; i++) {
+            this.buttons[i].style();
+        }
+    }
+
+    activate() {
+        for (let i = 0; i < this.buttons.length; i++) {
+            this.buttons[i].activate();
         }
     }
 }

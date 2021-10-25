@@ -1,6 +1,5 @@
 import { TextProcessor } from '../../components/text-processor.js';
 let letterCounterStructure = {
-    id: 'letter-counter',
     title: 'Letter Counter',
     buttons: {
         'Add Text': function addText() {
@@ -21,11 +20,49 @@ let letterCounterStructure = {
             inputContainer.textContent = '';
             letterCounterStructure.buttons['Count Letters']();
         }
+    },
+    classList: {
+        textProcessor: ['text-processor'],
+        header3: ['header3'],
+        navigationBar: {
+            navigationBar: ['navigation-bar'],
+            buttons: {
+                'Add Text': ['add-text-button', 'btn', 'btn-primary'],
+                'Count Letters': ['count-letters-button', 'btn', 'btn-secondary'],
+                'Remove Text': ['remove-text-button', 'btn', 'btn-danger']
+            }
+        },
+        ioContainer: {
+            ioContainer: ['io-container'],
+            inputContainer: ['io-container-subcontainer'],
+            outputContainer: ['io-container-subcontainer']
+        }
+    },
+    ids: {
+        textProcessor: 'letter-counter',
+        header3: 'letter-counter-header3',
+        navigationBar: {
+            navigationBar: 'letter-counter-navigation-bar',
+            buttons: {
+                'Add Text': 'letter-counter-add-text-button', 
+                'Count Letters': 'letter-counter-count-button', 
+                'Remove Text': 'letter-counter-remove-text-button'
+            }
+        },
+        ioContainer: {
+            ioContainer: 'letter-counter-io-container',
+            inputContainer: 'letter-counter-input-container',
+            outputContainer: 'letter-counter-output-container'
+        }
     }
 }
 
 let letterCounterProperties = {
         project: new TextProcessor(letterCounterStructure)
 }
+
+letterCounterProperties.project.render();
+letterCounterProperties.project.style();
+letterCounterProperties.project.activate();
 
 export { letterCounterProperties };

@@ -1,8 +1,16 @@
 class Container {
-    constructor(id, className) {
+    constructor(id, classList) {
         this.element = document.createElement('div');
-        this.element.id = `${id}-container`;
-        this.element.className = className;
+        this.id = id;
+        this.classList = classList;
+    }
+
+    render() {
+        this.element.id = this.id;
+    }
+
+    style() {
+       this.element.classList.add(...this.classList); 
     }
 }
 export { Container };

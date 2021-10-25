@@ -16,27 +16,6 @@ let randomWalkStructure = {
                 randomWalkProperties.balls.push(newBall);
             }
         },
-        'Remove Ball': function removeBall() {
-            let ballToRemove = randomWalkProperties.balls.pop();
-            let intervalToRemove = randomWalkProperties.intervalIDs.pop();
-            clearInterval(intervalToRemove);
-            ballToRemove.container.element.removeChild(ballToRemove.element);
-        },
-        'Remove All Balls': function removeAll() {
-            let length = randomWalkProperties.balls.length;
-            for (let i = 0; i < length; i++) {
-                let ballToRemove = randomWalkProperties.balls.pop();
-                let intervalToRemove = randomWalkProperties.intervalIDs.pop();
-                clearInterval(intervalToRemove);
-                ballToRemove.container.element.removeChild(ballToRemove.element);
-            }
-        },
-        'Start Simulation': function startSimulation() {
-            randomWalkProperties.balls.forEach((ball) => randomWalkProperties.intervalIDs.push(setInterval(ball.moveRandomly, 1000/62, ball)) );
-        },
-        'Stop Simulation': function stopSimulation() {
-            randomWalkProperties.intervalIDs.forEach( (id) => clearInterval(id) );
-        },
         'Change Wind Speed': function changeWindSpeed() {
             let newWindSpeed = Number.parseInt(prompt("How strong do you want the wind to be?"));
             if (!Number.isNaN(newWindSpeed)) {
@@ -54,7 +33,62 @@ let randomWalkStructure = {
                     ball.velY = ball.originalVelY;
                 }) 
             }
+        },
+        'Start Simulation': function startSimulation() {
+            randomWalkProperties.balls.forEach((ball) => randomWalkProperties.intervalIDs.push(setInterval(ball.moveRandomly, 1000/62, ball)) );
+        },
+        'Stop Simulation': function stopSimulation() {
+            randomWalkProperties.intervalIDs.forEach( (id) => clearInterval(id) );
+        },
+        'Remove Ball': function removeBall() {
+            let ballToRemove = randomWalkProperties.balls.pop();
+            let intervalToRemove = randomWalkProperties.intervalIDs.pop();
+            clearInterval(intervalToRemove);
+            ballToRemove.container.element.removeChild(ballToRemove.element);
+        },
+        'Remove All Balls': function removeAll() {
+            let length = randomWalkProperties.balls.length;
+            for (let i = 0; i < length; i++) {
+                let ballToRemove = randomWalkProperties.balls.pop();
+                let intervalToRemove = randomWalkProperties.intervalIDs.pop();
+                clearInterval(intervalToRemove);
+                ballToRemove.container.element.removeChild(ballToRemove.element);
+            }
         }
+    },
+    classList: {
+        simulation: ['simulation'],
+        header3: ['header3'],
+        navigationBar: {
+            navigationBar: ['navigation-bar'],
+            buttons: {
+                'Create Balls': ['create-balls-button', 'btn', 'btn-primary'], 
+                'Remove Ball': ['remove-ball-button', 'btn', 'btn-warning'], 
+                'Remove All Balls': ['remove-all-balls-button', 'btn', 'btn-danger'], 
+                'Start Simulation': ['start-simulation-button', 'btn', 'btn-success'], 
+                'Stop Simulation': ['stop-simulation-button', 'btn', 'btn-warning'],
+                'Change Wind Speed': ['change-wind-speed-button', 'btn', 'btn-secondary'],
+                'Change Gravity': ['change-gravity-button', 'btn', 'btn-secondary']
+            }
+        },
+        container: ['container']
+    },
+    ids: {
+        simulation: 'random-walk-simulation',
+        header3: 'random-walk-simulation-header3',
+        navigationBar: {
+            navigationBar: 'random-walk-simulation-navigation-bar',
+            buttons: {
+                'Create Balls': 'random-walk-simulation-create-balls-button', 
+                'Remove Ball': 'random-walk-simulation-remove-ball-button', 
+                'Remove All Balls': 'random-walk-simulation-remove-all-balls-button', 
+                'Start Simulation': 'random-walk-simulation-start-simulation-button', 
+                'Stop Simulation': 'random-walk-simulation-stop-simulation-button',
+                'Change Wind Speed': 'random-walk-simulation-change-wind-speed-button',
+                'Change Gravity': 'random-walk-simulation-change-gravity-button'
+            }
+        },
+        container: 'random-walk-simulation-container'
     }
 }
 
@@ -68,5 +102,9 @@ let randomWalkProperties = {
         windSpeed: 0,
         project: new Simulation(randomWalkStructure)
 }
+
+randomWalkProperties.project.render();
+randomWalkProperties.project.style();
+randomWalkProperties.project.activate();
 
 export { randomWalkProperties };

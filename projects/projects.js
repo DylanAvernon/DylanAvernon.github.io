@@ -7,11 +7,15 @@ import { wordCounterProperties } from "./text-processors/word-counter.js";
 import { sentenceCounterProperties } from "./text-processors/sentence-counter.js";
 
 // Simulations
-document.getElementById('simulations').appendChild(projectileSimulationProperties.project.element);
-document.getElementById('simulations').appendChild(randomWalkProperties.project.element);
-document.getElementById('simulations').appendChild(pacmanSimulationProperties.project.element);
+let simulations = document.getElementById('simulations');
+
+simulations.appendChild(projectileSimulationProperties.project.element);
+simulations.appendChild(randomWalkProperties.project.element);
+simulations.appendChild(pacmanSimulationProperties.project.element);
 
 // Text-Processors
-document.getElementById('text-processors').appendChild(letterCounterProperties.project.element);
-document.getElementById('text-processors').appendChild(wordCounterProperties.project.element);
-document.getElementById('text-processors').appendChild(sentenceCounterProperties.project.element);
+let textProcessors = document.getElementById('text-processors');
+
+textProcessors.appendChild(letterCounterProperties.project.element);
+textProcessors.appendChild(wordCounterProperties.project.element);
+textProcessors.appendChild(sentenceCounterProperties.project.element);

@@ -1,7 +1,6 @@
 import { Simulation } from '../../components/simulation.js';
 import { Ball } from '../../components/ball.js';
 let projectileSimulationStructure = {
-    id: 'projectile-simulation',
     title: 'Projectile Simulation',
     buttons: {
         'Create Balls': function createBalls() {
@@ -14,6 +13,21 @@ let projectileSimulationStructure = {
                 newBall.container.element.appendChild(newBall.element);
                 projectileSimulationProperties.balls.push(newBall);
             }
+        },
+        'Change Gravity': function changeGravity() {
+            let newGravity = Number.parseInt(prompt("How strong do you want the gravity to be?"));
+            if (!Number.isNaN(newGravity)) {
+                projectileSimulationProperties.gravity = newGravity;
+                projectileSimulationProperties.balls.forEach((ball) => {
+                    ball.velY = ball.originalVelY;
+                }) 
+            }
+        },
+        'Start Simulation': function startSimulation() {
+            projectileSimulationProperties.balls.forEach((ball) => projectileSimulationProperties.intervalIDs.push(setInterval(ball.move, 1000/60, ball)) );
+        },
+        'Stop Simulation': function stopSimulation() {
+            projectileSimulationProperties.intervalIDs.forEach( (id) => clearInterval(id) );
         },
         'Remove Ball': function removeBall() {
             let ballToRemove = projectileSimulationProperties.balls.pop();
@@ -29,22 +43,39 @@ let projectileSimulationStructure = {
                 clearInterval(intervalToRemove);
                 ballToRemove.container.element.removeChild(ballToRemove.element);
             }
-        },
-        'Start Simulation': function startSimulation() {
-            projectileSimulationProperties.balls.forEach((ball) => projectileSimulationProperties.intervalIDs.push(setInterval(ball.move, 1000/60, ball)) );
-        },
-        'Stop Simulation': function stopSimulation() {
-            projectileSimulationProperties.intervalIDs.forEach( (id) => clearInterval(id) );
-        },
-        'Change Gravity': function changeGravity() {
-            let newGravity = Number.parseInt(prompt("How strong do you want the gravity to be?"));
-            if (!Number.isNaN(newGravity)) {
-                projectileSimulationProperties.gravity = newGravity;
-                projectileSimulationProperties.balls.forEach((ball) => {
-                    ball.velY = ball.originalVelY;
-                }) 
-            }
         }
+    },
+    classList: {
+        simulation: ['simulation'],
+        header3: ['header3'],
+        navigationBar: {
+            navigationBar: ['navigation-bar'],
+            buttons: {
+                'Create Balls': ['create-balls-button', 'btn', 'btn-primary'], 
+                'Remove Ball': ['remove-ball-button', 'btn', 'btn-warning'], 
+                'Remove All Balls': ['remove-all-balls-button', 'btn', 'btn-danger'], 
+                'Start Simulation': ['start-simulation-button', 'btn', 'btn-success'], 
+                'Stop Simulation': ['stop-simulation-button', 'btn', 'btn-warning'],
+                'Change Gravity': ['change-gravity-button', 'btn', 'btn-secondary']
+            }
+        },
+        container: ['container']
+    },
+    ids: {
+        simulation: 'projectile-simulation',
+        header3: 'projectile-simulation-header3',
+        navigationBar: {
+            navigationBar: 'projectile-simulation-navigation-bar',
+            buttons: {
+                'Create Balls': 'projectile-simulation-create-balls-button', 
+                'Remove Ball': 'projectile-simulation-remove-balls-button', 
+                'Remove All Balls': 'projectile-simulation-remove-all-balls-button', 
+                'Start Simulation': 'projectile-simulation-start-simulation-button', 
+                'Stop Simulation': 'projectile-simulation-stop-simulation-button',
+                'Change Gravity': 'projectile-simulation-change-gravity-button'
+            }
+        },
+        container: 'projectile-simulation-container'
     }
 }
 
@@ -56,5 +87,9 @@ let projectileSimulationProperties = {
         gravity: 0,
         project: new Simulation(projectileSimulationStructure)
 }
+
+projectileSimulationProperties.project.render();
+projectileSimulationProperties.project.style();
+projectileSimulationProperties.project.activate();
 
 export { projectileSimulationProperties };
