@@ -5,8 +5,8 @@ let busTrackerStructure = {
     title: 'Bus Tracker',
     buttons: {
         'Load Access Tokens': function getMapBoxToken() {
-            mapboxgl.accessToken = prompt('Please provide an access token for MapBox GL.');
-            busTrackerProperties.mbtaApiKey = prompt('Please provide the access key for the MBTA Api. This key will only be stored on your machine. It will not be recorded or preserved in any way.');
+            mapboxgl.accessToken = prompt('This application will use MapBox GL to build a map of the Boston, MA area. Please provide a valid access key to use MapBox GL.');
+            busTrackerProperties.mbtaApiKey = prompt("This application will issue data requests to MBTA's transportation database to populate the map with bus transportaion information. Please provide a valid access key for MBTA's api.");
             busTrackerProperties.map = new mapboxgl.Map({
                 container: 'map',
                 style: 'mapbox://styles/mapbox/streets-v11',
