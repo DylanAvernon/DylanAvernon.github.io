@@ -34,6 +34,10 @@ let pacmanSimulationStructure = {
             }
         }
     },
+    repoLink: {
+        href: 'https://github.com/DylanAvernon/pacman-simulation',
+        textContent: 'GitHub Repo'
+    },
     classList: {
         simulation: ['simulation'],
         header3: ['header3'],
@@ -47,7 +51,8 @@ let pacmanSimulationStructure = {
                 'Remove All Pacmen': ['remove-all-pacmen-button', 'btn', 'btn-danger']
             }
         },
-        container: ['container']
+        container: ['container'],
+        repoLink: ['repo-link', 'link-info']
     },
     ids: {
         simulation: 'pacman-simulation',
@@ -62,7 +67,8 @@ let pacmanSimulationStructure = {
                 'Remove All Pacmen': 'pacman-simulation-remove-all-pacmen-button' 
             }
         },
-        container: 'pacman-simulation-container'
+        container: 'pacman-simulation-container',
+        repoLink: 'pacman-simulation-repo-link'
     }
 };
 

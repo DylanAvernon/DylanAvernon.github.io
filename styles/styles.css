@@ -11,6 +11,9 @@ h3 {
     padding: 0px;
     text-align: center;
 }
+h2 {
+    margin-top: 50px;
+}
 button {
     margin-bottom: 2px;
     margin-top: 2px;
@@ -21,10 +24,12 @@ button {
     height: 250px;
     border-radius: 100%;
 }
-
+.bus-tracker, .simulation, .text-processor {
+    margin-top: 25px;
+}
 #simulations, #text-processors, #featured-projects {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     flex-wrap: wrap;
 }
 
@@ -38,16 +43,14 @@ button {
 .container {
     position: relative;
     outline: 3px solid black;
-    margin-bottom: 50px;
     width: 500px;
     height: 500px;
 }
 .io-container {
     position: relative;
+    outline: 3px solid black;
     width: 500px;
     height: 500px;
-    margin-bottom: 50px;
-    outline: 3px solid black;
 }
 .io-container-subcontainer {
     width: 500px;
@@ -82,4 +85,7 @@ button {
     grid-template-columns: repeat(5, 60px);
     grid-template-rows: repeat(1, 60px);
     grid-gap: 10px;
+}
+.repo-link {
+
 }

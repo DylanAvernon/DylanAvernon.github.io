@@ -45,6 +45,10 @@ let projectileSimulationStructure = {
             }
         }
     },
+    repoLink: {
+        href: 'https://github.com/DylanAvernon/projectile-simulation',
+        textContent: 'GitHub Repo'
+    },
     classList: {
         simulation: ['simulation'],
         header3: ['header3'],
@@ -59,7 +63,8 @@ let projectileSimulationStructure = {
                 'Change Gravity': ['change-gravity-button', 'btn', 'btn-secondary']
             }
         },
-        container: ['container']
+        container: ['container'],
+        repoLink: ['repo-link', 'link-info']
     },
     ids: {
         simulation: 'projectile-simulation',
@@ -75,7 +80,8 @@ let projectileSimulationStructure = {
                 'Change Gravity': 'projectile-simulation-change-gravity-button'
             }
         },
-        container: 'projectile-simulation-container'
+        container: 'projectile-simulation-container',
+        repoLink: 'projectile-simulation-repo-link'
     }
 }
 

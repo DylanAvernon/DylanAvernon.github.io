@@ -56,6 +56,10 @@ let randomWalkStructure = {
             }
         }
     },
+    repoLink: {
+        href: 'https://github.com/DylanAvernon/random-walk-simulation',
+        textContent: 'GitHub Repo'
+    },
     classList: {
         simulation: ['simulation'],
         header3: ['header3'],
@@ -71,7 +75,8 @@ let randomWalkStructure = {
                 'Change Gravity': ['change-gravity-button', 'btn', 'btn-secondary']
             }
         },
-        container: ['container']
+        container: ['container'],
+        repoLink: ['repo-link', 'link-info']
     },
     ids: {
         simulation: 'random-walk-simulation',
@@ -88,7 +93,8 @@ let randomWalkStructure = {
                 'Change Gravity': 'random-walk-simulation-change-gravity-button'
             }
         },
-        container: 'random-walk-simulation-container'
+        container: 'random-walk-simulation-container',
+        repoLink: 'random-walk-simulation-repo-link'
     }
 }
 
