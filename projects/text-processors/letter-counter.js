@@ -21,6 +21,10 @@ let letterCounterStructure = {
             letterCounterStructure.buttons['Count Letters']();
         }
     },
+    repoLink: {
+        href: 'https://github.com/DylanAvernon/letter-counter',
+        textContent: 'GitHub Repo'
+    },
     classList: {
         textProcessor: ['text-processor'],
         header3: ['header3'],
@@ -36,7 +40,8 @@ let letterCounterStructure = {
             ioContainer: ['io-container'],
             inputContainer: ['io-container-subcontainer'],
             outputContainer: ['io-container-subcontainer']
-        }
+        },
+        repoLink: ['repo-link', 'link-info']
     },
     ids: {
         textProcessor: 'letter-counter',
@@ -53,7 +58,8 @@ let letterCounterStructure = {
             ioContainer: 'letter-counter-io-container',
             inputContainer: 'letter-counter-input-container',
             outputContainer: 'letter-counter-output-container'
-        }
+        },
+        repoLink: 'letter-counter-repo-link'
     }
 }
 

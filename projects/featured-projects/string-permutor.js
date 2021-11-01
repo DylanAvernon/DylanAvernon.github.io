@@ -49,6 +49,10 @@ let stringPermutorStructure = {
             stringPermutorProperties.permutationCount++;
         }
     },
+    repoLink: {
+        href: '#',
+        textContent: 'GitHub Repo'
+    },
     classList: {
         grid: [],
         header3: [],
@@ -59,7 +63,8 @@ let stringPermutorStructure = {
                 'Permute': ['permute-button', 'btn', 'btn-secondary']
             }
         },
-        container: ['container', 'permutor-container', 'grid-container']
+        container: ['container', 'permutor-container', 'grid-container'],
+        repoLink: ['repo-link', 'link-light']
     },
     ids: {
         grid: 'string-permutor-grid',
@@ -71,7 +76,8 @@ let stringPermutorStructure = {
                 'Permute': 'string-permutor-permute-button'
             } 
         },
-        container: 'string-permutor-container'
+        container: 'string-permutor-container',
+        repoLink: 'string-permutor-repo-link'
     }
 };
 

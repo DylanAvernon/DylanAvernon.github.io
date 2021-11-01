@@ -23,6 +23,10 @@ let busTrackerStructure = {
             busTrackerProperties.interval.pop();
         }
     },
+    repoLink: {
+        href: 'https://github.com/DylanAvernon/real-time-bus-tracker',
+        textContent: 'GitHub Repo'
+    },
     classList: {
         map: ['bus-tracker'],
         header3: ['header3'],
@@ -34,7 +38,8 @@ let busTrackerStructure = {
                 'Stop Bus Tracker': ['stop-bus-tracker-button', 'btn', 'btn-warning']
             }
         },
-        container: ['container']
+        container: ['container'],
+        repoLink: ['repo-link', 'link-info']
     },
     ids: {
         map: 'bus-tracker',
@@ -48,7 +53,8 @@ let busTrackerStructure = {
                 'Stop Bus Tracker': ['bus-tracker-stop-bus-tracker-button']
             }
         },
-        container: 'map'
+        container: 'map',
+        repoLink: 'bus-tracker-repo-link'
     }
 };
 

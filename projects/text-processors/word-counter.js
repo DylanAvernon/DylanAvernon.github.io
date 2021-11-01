@@ -27,6 +27,10 @@ let wordCounterStructure = {
             wordCounterStructure.buttons['Count Words']();
         }
     },
+    repoLink: {
+        href: 'https://github.com/DylanAvernon/letter-counter',
+        textContent: 'GitHub Repo'
+    },
     classList: {
         textProcessor: ['text-processor'],
         header3: ['header3'],
@@ -42,7 +46,8 @@ let wordCounterStructure = {
             ioContainer: ['io-container'],
             inputContainer: ['io-container-subcontainer'],
             outputContainer: ['io-container-subcontainer']
-        }
+        },
+        repoLink: ['repo-link', 'link-info']
     },
     ids: {
         textProcessor: 'word-counter',
@@ -59,7 +64,8 @@ let wordCounterStructure = {
             ioContainer: 'word-counter-io-container',
             inputContainer: 'word-counter-input-container',
             outputContainer: 'word-counter-output-container'
-        }
+        },
+        repoLink: 'word-counter-repo-link'
     }
 }
 

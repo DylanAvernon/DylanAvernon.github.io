@@ -19,7 +19,9 @@ button {
     margin-top: 2px;
     margin-right: 2px;
 }
-
+#projects {
+    margin: 5px;
+}
 #profile-image { 
     height: 250px;
     border-radius: 100%;
@@ -31,6 +33,7 @@ button {
     display: flex;
     justify-content: left;
     flex-wrap: wrap;
+    margin: 5px;
 }
 
 .navigation-bar {
@@ -38,19 +41,21 @@ button {
     margin-bottom: 5px;
 }
 .permutor-container {
-    padding: 5px;
+    margin: 0px;
 }
 .container {
     position: relative;
     outline: 3px solid black;
     width: 500px;
     height: 500px;
+    margin: 5px;
 }
 .io-container {
     position: relative;
     outline: 3px solid black;
     width: 500px;
     height: 500px;
+    margin: 5px;
 }
 .io-container-subcontainer {
     width: 500px;

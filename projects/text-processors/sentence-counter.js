@@ -26,6 +26,10 @@ let sentenceCounterStructure = {
             sentenceCounterStructure.buttons['Count Sentences']();
         }
     },
+    repoLink: {
+        href: 'https://github.com/DylanAvernon/sentence-counter',
+        textContent: 'GitHub Repo'
+    },
     classList: {
         textProcessor: ['text-processor'],
         header3: ['header3'],
@@ -41,7 +45,8 @@ let sentenceCounterStructure = {
             ioContainer: ['io-container'],
             inputContainer: ['io-container-subcontainer'],
             outputContainer: ['io-container-subcontainer']
-        }
+        },
+        repoLink: ['repo-link', 'link-info']
     },
     ids: {
         textProcessor: 'sentence-counter',
@@ -58,7 +63,8 @@ let sentenceCounterStructure = {
             ioContainer: 'sentence-counter-io-container',
             inputContainer: 'sentence-counter-input-container',
             outputContainer: 'sentence-counter-output-container'
-        }
+        },
+        repoLink: 'sentence-counter-repo-link'
     }
 }
 
