@@ -50,7 +50,7 @@ let stringPermutorStructure = {
         }
     },
     repoLink: {
-        href: '#',
+        href: 'https://github.com/DylanAvernon/string-permutations',
         textContent: 'GitHub Repo'
     },
     classList: {
