@@ -18,7 +18,7 @@ let eyesStructure = {
         }
     },
     repoLink: {
-        href: '#',
+        href: 'https://github.com/DylanAvernon/eyes',
         textContent: 'GitHub Repo'
     },
     classList: {

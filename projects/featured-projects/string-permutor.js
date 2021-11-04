@@ -64,7 +64,7 @@ let stringPermutorStructure = {
             }
         },
         container: ['my-container', 'permutor-container', 'grid-container'],
-        repoLink: ['repo-link', 'link-light']
+        repoLink: ['repo-link', 'link-info']
     },
     ids: {
         grid: 'string-permutor-grid',
