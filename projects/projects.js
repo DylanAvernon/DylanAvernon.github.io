@@ -7,12 +7,14 @@ import { wordCounterProperties } from "./text-processors/word-counter.js";
 import { sentenceCounterProperties } from "./text-processors/sentence-counter.js";
 import { stringPermutorProperties } from "./featured-projects/string-permutor.js";
 import { busTrackerProperties } from "./featured-projects/bus-tracker.js";
+import { eyesProperties } from "./featured-projects/eyes.js";
 
 // Featured Projects
 let featuredProjects = document.getElementById('featured-projects');
 
 featuredProjects.appendChild(busTrackerProperties.project.element);
 featuredProjects.appendChild(pacmanSimulationProperties.project.element);
+featuredProjects.appendChild(eyesProperties.project.element);
 
 // Simulations
 let simulations = document.getElementById('simulations');

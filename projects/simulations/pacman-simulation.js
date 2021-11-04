@@ -51,7 +51,7 @@ let pacmanSimulationStructure = {
                 'Remove All Pacmen': ['remove-all-pacmen-button', 'btn', 'btn-danger']
             }
         },
-        container: ['container'],
+        container: ['my-container'],
         repoLink: ['repo-link', 'link-info']
     },
     ids: {

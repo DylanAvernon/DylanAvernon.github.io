@@ -63,7 +63,7 @@ let projectileSimulationStructure = {
                 'Change Gravity': ['change-gravity-button', 'btn', 'btn-secondary']
             }
         },
-        container: ['container'],
+        container: ['my-container'],
         repoLink: ['repo-link', 'link-info']
     },
     ids: {

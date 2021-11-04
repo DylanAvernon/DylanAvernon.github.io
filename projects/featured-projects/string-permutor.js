@@ -63,7 +63,7 @@ let stringPermutorStructure = {
                 'Permute': ['permute-button', 'btn', 'btn-secondary']
             }
         },
-        container: ['container', 'permutor-container', 'grid-container'],
+        container: ['my-container', 'permutor-container', 'grid-container'],
         repoLink: ['repo-link', 'link-light']
     },
     ids: {

@@ -38,7 +38,7 @@ let busTrackerStructure = {
                 'Stop Bus Tracker': ['stop-bus-tracker-button', 'btn', 'btn-warning']
             }
         },
-        container: ['container'],
+        container: ['my-container'],
         repoLink: ['repo-link', 'link-info']
     },
     ids: {
