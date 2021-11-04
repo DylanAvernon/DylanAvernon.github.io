@@ -5,10 +5,10 @@ body {
 main > .container {
     padding: 60px 15px 0;
 }
-#page-header {
+/* #page-header {
     text-align: center;
     color: #d7d5d3;
-}
+} */
 h3 {
     width: 517px;
     margin-top: 0px;
@@ -29,11 +29,11 @@ button {
 /* #projects {
     margin: 0px;
 } */
-#profile-image { 
+/* #profile-image { 
     height: 250px;
     border-radius: 100%;
     outline: 3px solid #637439;
-}
+} */
 .bus-tracker, .simulation, .text-processor {
     margin-top: 25px;
 }

@@ -1,0 +1,16 @@
+body {
+    background-color: #2a3933;
+    height: 100%;
+}
+main > .container {
+    padding: 60px 15px 0;
+}
+#page-header {
+    text-align: center;
+    color: #d7d5d3;
+}
+#profile-image { 
+    height: 250px;
+    border-radius: 100%;
+    outline: 3px solid #637439;
+}
